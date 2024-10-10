@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+:root {
+    --font-family: "Noto Sans TC", sans-serif;;
+    /* --font-family-alt: 'Helvetica', Arial, sans-serif; */
+    --font-weight: 400;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    /* 3:4 perfect fourth scale */
+    --font-size-x-display: 5.16rem;
+    --font-size-display: 4.3rem;
+    --font-size-xx-large: 3.583rem;
+    --font-size-x-large: 2.488rem;
+    --font-size-large: 1.728rem;
+    --font-size-medium: 1.44rem;
+    --font-size: 1.05rem;
+    --font-size-small: 0.833rem;
+    --font-size-x-small: 0.694rem;
+    --font-size-xx-small: 0.579rem;
+    --lineheight-text: 1.55;
+    --lineheight-short: 1.2;
+    
+    --color-background: #f1eff6;
+    --color-base: #f3f8fc;
+    --color-accent: #0074DF;
+    --color-accent-darker: #005fb9; 
+    --color-secondary: hsl(315, 76%, 54%); 
+    --color-background-selection: #EAF2F9;
+    --color-gradient-fill-selection: linear-gradient(180deg, rgba(234,242,249,1) 0%, rgba(234,242,249,0.85) 80%, rgba(234,242,249,0) 100%);
+    --color-background-selection-secondary: #f9ebf6;
+    --color-gradient-fill-selection-secondary: linear-gradient(180deg, rgba(249,235,246,1) 0%, rgba(249,235,246,0.85) 80%, rgba(249,235,246,0) 100%);
+    --color-border: #9bbcdb;
+    --color-text-default: #2b2b2b;
+    --color-text-link: var(--color-accent);
+    --color-text-link-active: var(--color-text-link);
+    --color-text-link-focus: var(--color-text-link);
+    --color-text-link-hover: #7AA8D4;
+    --color-text-link-visited: var(--color-text-link);
+    
+    --color-button-default: var(--color-accent:);
+    --color-button-border: var(--color-base);
+    --color-button-text: #ffffff;
+    
+    --border-radius-x-small: .25rem;
+    --border-radius-small: .5rem;
+    --border-radius-medium: .75rem;
+    --border-radius-large: 1.5rem;
+    --border-radius: 1rem;
+    --border-radius-circle: 50%;
+    --border-width-hairline: 0.5px;
+    --border-width: 1px;
+    --border-width-thin: 2px;
+    --border-width-thick: 5px;
+    
+    --grid-64: 3fr 1fr 2fr 2fr 1fr 3fr;
+    --grid-gap: 4vw;
+    
+    --max-width: 80rem;
+    --spacing-xx-small: .125rem;
+    --spacing-x-small: .25rem;
+    --spacing-small: .5rem;
+    --spacing: .75rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 1.5rem;
+    --spacing-x-large: 2rem;
+    --spacing-xx-large: 3rem; 
+    
+    --duration-instantly: 0;
+    --duration-immediately: 0.1s;
+    --duration-quickly: 0.2s;
+    --duration-promptly: 0.5s;
+    --duration-slowly: 1s;
+    
+    --box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+    line-height: var(--lineheight-text);
+    color: var(--color-text-default);
+    background-color: var(--color-background);
+}
+.txt-300 {
+    font-weight: 300;
+}
+.txt-400 {
+    font-weight: 400;
+}
+.txt-500 {
+    font-weight: 500;
+}
+.txt-600 {
+    font-weight: 600;
+}
+.txt-700 {
+    font-weight: 700;
+}
+h1 {
+    font-size: var(--font-size-x-display);
+    font-weight: 700;
+}
+h2 {
+    font-size: var(--font-size-display);
+    font-weight: 700;
+}
+h3, .txt-xx-lg {
+    font-size: var(--font-size-xx-large);
+    font-weight: 600;
+}
+h4, .txt-x-lg {
+    font-size: var(--font-size-x-large);
+    font-weight: 600;
+}
+h5, .txt-lg {
+    font-size: var(--font-size-large);
+    font-weight: 500;
+}
+h6, .txt-md {
+    font-size: var(--font-size-medium);
+    font-weight: 500;
+}
+p, .txt-rg, .txt-regular {
+    font-size: var(--font-size);
+}
+.txt-sm {
+    font-size: var(--font-size-small);
+}
+.txt-mi, .txt-miny {
+    font-size: var(--font-size-x-small);
+}
+.txt-ty, .txt-tiny {
+    font-size: var(--font-size-xx-small);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body main {
+    flex-grow: 1;
+}

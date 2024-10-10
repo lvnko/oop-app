@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS：物件導向與設計模式 - 課堂習作</title>
+<link rel="stylesheet" type="text/css" href="/public/styles/main.css" />
+<style>
+.main {
+    height: 100vh;
+    height: 100svh;
+}
+.main-container {
+    padding: 1rem 2rem;
+    background-color: var(--color-background);
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.row-message {
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-button-text);
+    padding: 0.25rem 0.5rem;
+}
+.exercise-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+    padding: 0 0 0.75rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.exercise-list select {
+    font-size: var(--font-size);
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.exercise-list .exercise-node {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    background-color: var(--color-background-selection);
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+}
+.exercise-list .exercise-node.node-homework {
+    background-color: var(--color-background-selection-secondary);
+}
+.exercise-list .exercise-node {
+    margin-top: 0.5rem;
+}
+.exercise-list .exercise-node .node-label {
+    display: flex;
+    flex-direction: column;
+}
+.exercise-list .exercise-node p,
+.exercise-list .exercise-node a {
+    font-size: var(--font-size-medium);
+}
+.exercise-list .exercise-node > *:nth-child(1),
+.exercise-list .exercise-node > *:nth-child(2) {
+    flex-basis: 50%;
+    position: sticky;
+    z-index: 5;
+    top: calc(2.4375rem + 1px);
+    background: var(--color-gradient-fill-selection);
+}
+.exercise-list .exercise-node.node-homework > *:nth-child(1),
+.exercise-list .exercise-node.node-homework > *:nth-child(2) {
+    background: var(--color-gradient-fill-selection-secondary);
+}
+.exercise-list .exercise-node .label-desc {
+    font-size: var(--font-size);
+    color: var(--color-text-link-hover);
+}
+.exercise-list .exercise-node .node-link,
+.exercise-list .exercise-node .node-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.exercise-list .exercise-node .node-link a {
+    background-color: var(--color-accent);
+    color: var(--color-button-text);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--border-radius-small);
+    font-size: var(--font-size);
+}
+.exercise-list .exercise-node .node-link a:hover {
+    background-color: var(--color-accent-darker);
+}
+.exercise-list .exercise-node .node-status {
+}
+.exercise-list .exercise-node .node-status p,
+.exercise-list .exercise-node .node-status a {
+    font-size: var(--font-size);
+    padding: calc((var(--font-size-medium) - var(--font-size)) * var(--lineheight-text) / 2) 0;
+}
+.exercise-list .exercise-node .node-status a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+.exercise-list .exercise-node .node-textarea {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 1rem;
+    background-color: var(--color-base);
+    margin-top: 0.5rem;
+}
+.exercise-list .exercise-node .node-textarea textarea {
+    width: 100%; border: 0px none;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+    transition: height 0.3s ease;
+    overflow-y: hidden;
+}
+.exercise-list .exercise-node .node-textarea textarea:focus {
+    outline: 0px none;
+}
+
+@media only screen and (min-width: 820px) {
+    .exercise-list .exercise-node .node-label {
+        flex-direction: row;
+        column-gap: 0.75rem;
+        align-items: center;
+    }
+}
+
+</style>
+</head>
+<body>
+    <main class="main">
+        <div class="main-container">
+            <h3>JS：物件導向與設計模式</h3>
+            <h4>課堂習作</h4>
+            <div class="row-message">
+                <p>&#9888; 請打開瀏覽器的 Console 以檢視習作的輸出結果，謝謝。</p>
+            </div>
+            <div id="exercise-list" class="exercise-list"></div>
+        </div>
+    </main>
+    <script src="./core-ui.js"></script>
+</body>
+</html>
