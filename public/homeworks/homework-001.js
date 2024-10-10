@@ -86,7 +86,7 @@
     });
 
     const apple = new Thing({
-        name: "頻果",
+        name: "蘋果",
         price: 68
     });
 

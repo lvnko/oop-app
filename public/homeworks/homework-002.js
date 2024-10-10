@@ -112,7 +112,7 @@
     });
 
     let appleOrder = new OrderItem({
-        name: "頻果",
+        name: "蘋果",
         price: 68,
         quantity: 2
     });
