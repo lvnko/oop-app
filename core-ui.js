@@ -1,3 +1,5 @@
+const defaultNodeTypeIndex = 1;
+
 const cnNumbers = ['一','二','三','四','五','六','七','八','九','十'];
 
 const exerciseTypes = [
@@ -310,7 +312,7 @@ const { index: excLoadedIndex, type: typeIndex } = queryString(window.location.h
 
 const listTypeSelectionObject = new TypeSelectionList({
     list: exerciseTypes,
-    selectedIndex: typeIndex !== undefined ? parseInt(typeIndex) : 2
+    selectedIndex: typeIndex !== undefined ? parseInt(typeIndex) : defaultNodeTypeIndex
 });
 
 const exercisesObject = exercisesData.map(({ index, type, ...data })=>{
