@@ -6,8 +6,10 @@ class AbstractClass {
 }
 
 
-class PolymorphA {
-    constructor() {}
+class PolymorphA extends AbstractClass {
+    constructor() {
+        super();
+    }
     func(_value) {
         if (typeof _value === "number") return 1;
         if (typeof _value === "boolean") return true;
@@ -18,8 +20,10 @@ class PolymorphA {
     }
 }
 
-class PolymorphB {
-    constructor() {}
+class PolymorphB extends AbstractClass {
+    constructor() {
+        super();
+    }
     func(_value) {
         if (typeof _value === "number") return 2;
         if (typeof _value === "boolean") return false;
