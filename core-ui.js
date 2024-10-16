@@ -302,7 +302,7 @@ const fillExercisesList = (listOfObj, listTypeObj, target) => {
             if (obj.type === listTypeObj.selectedIndex)
                 target.appendChild(obj.html);
         } else {
-            console.log('All IN');
+            // console.log('All IN');
             target.appendChild(obj.html);
         }
     });
